@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import imgs from "../images/*.jpg";
 
 /* модалка basket */
 const modal = document.querySelector('#modal-basket'); // получение доступа к модалке
@@ -52,7 +53,7 @@ function loadJSON() {
         html += `
           <div class="main-card">
             <div class="card-image">
-              <img src="${product?.imgSrc}" alt="image">
+              <img class="pic" src="" alt="image">
       
               <div class="card-wishlist">
                 <div class="wishlist-rating">
@@ -87,6 +88,10 @@ function loadJSON() {
         `
       })
       productList.innerHTML = html;
+      // отрисовка картинок
+      let pic = document.querySelectorAll(".pic");
+      let img = Object.values(imgs);
+        pic.forEach((a, i) => a.setAttribute("src", img[i]));
     })
     .catch(error => {
       console.log(error);
@@ -164,7 +169,7 @@ function addToBasketList(product) {
         </div>
         <button id="close-button" class="button close-button">
           Remove
-          <img src="images/delete-icon.svg" alt="delete-icon">
+          <img src="../icons/delete-icon.svg" alt="delete-icon">
         </button>
       </div>
       <div class="inline-flex">

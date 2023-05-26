@@ -5,21 +5,21 @@
             "category": "Chair",
             "rating": "4.9",
             "price": "50.25",
-            "imgSrc": "https://klike.net/uploads/posts/2022-09/1662466090_v-25.jpg"
+            "imgSrc": "images/help-image-1.jpg"
         },
         {
             "name": "Bed",
             "category": "Bed",
             "rating": "3.0",
             "price": "102.00",
-            "imgSrc": "https://klike.net/uploads/posts/2022-09/1662466090_v-25.jpg"
+            "imgSrc": "images/help-image-2.jpg"
         },
         {
             "name": "Bench",
             "category": "Bench",
             "rating": "4.9",
             "price": "15.00",
-            "imgSrc": "https://klike.net/uploads/posts/2022-09/1662466090_v-25.jpg"
+            "imgSrc": "images/help-image-3.jpg"
         },
         {
             "name": "Bunk bed",
