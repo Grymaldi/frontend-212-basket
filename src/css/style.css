@@ -128,6 +128,7 @@ main {
   letter-spacing: -0.8px;
   color: var(--title-color);
   margin-bottom: 46px;
+  display: inline-block; /* делает skeleton по размеру текста */
   position: relative;
 }
 

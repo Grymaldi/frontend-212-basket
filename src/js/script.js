@@ -53,7 +53,9 @@ function loadJSON() {
         html += `
           <div class="main-card">
             <div class="card-image">
-              <img class="pic" src="" alt="image">
+              <div class="skeleton">
+                <img class="pic" src="" alt="image">
+              </div>
       
               <div class="card-wishlist">
                 <div class="wishlist-rating">
@@ -66,7 +68,7 @@ function loadJSON() {
                     </svg>
                   </div>
         
-                  <span class="rating-amount">${product?.rating}</span>
+                  <span class="rating-amount skeleton">${product?.rating}</span>
                 </div>
         
                 <svg class="whishlist-heart" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -77,17 +79,19 @@ function loadJSON() {
               </div>
             </div>
       
-            <h3 class="card-name">${product?.name}</h3>
+            <h3 class="card-name skeleton">${product?.name}</h3>
       
-            <p class="card-category">${product?.category}</p>
+            <p class="card-category skeleton">${product?.category}</p>
 
-            <p class="card-price">${product?.price}</p>
+            <p class="card-price skeleton">${product?.price}</p>
       
-            <button class="btn btn-primary">Add to cart</button>
+            <button class="btn btn-primary skeleton">Add to cart</button>
           </div>
         `
       })
       productList.innerHTML = html;
+      skeleton();
+
       // отрисовка картинок
       let pic = document.querySelectorAll(".pic");
       let img = Object.values(imgs);
@@ -259,10 +263,12 @@ function findcartInfo() {
 
 
 // /* skeleton */
-// const allSkeletons = document.querySelectorAll('.skeleton');
+function skeleton() {
+  const allSkeletons = document.querySelectorAll(".skeleton");
 
-// window.addEventListener('load', () => {
-//   allSkeletons.forEach(element => {
-//     element.classList.remove('skeleton');
-//   })
-// })
+  window.addEventListener("load", () => {
+    allSkeletons.forEach((element) => {
+      element.classList.remove("skeleton");
+    });
+  });
+}
